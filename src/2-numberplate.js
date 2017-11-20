@@ -24,7 +24,7 @@ const one = 'I like money';
 console.log(`Number plate: ${produceVanityPlate(one)}`);
 
 const two = 'Cats for life';
-console.log(`Number plate: ${produceVanityPlate(two)}`)
+console.log(`Number plate: ${produceVanityPlate(two)}`);
 
 const three = 'Hot for you too';
 console.log(`Number plate: ${produceVanityPlate(three)}`);
