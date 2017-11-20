@@ -1,14 +1,33 @@
-function formatVanityPlate(string) {
-  let words = string.split(' ')
-  words = words.map(word => word.toUpperCase())
-  return words.join('')
+function coolifyplateText(plateText) {
+    return plateText.replace('for', '4').replace('too', 'to').replace('to', '2');
 }
 
-const one = 'I like money'
-console.log(`Number plate: ${ formatVanityPlate(one) }`)
+function shortenPlateText(plateText) {
+  if (plateText.length > 12) {
+    return plateText.substring(0, 12);
+  }
 
-const two = 'Cats for life'
-console.log(`Number plate: ${ formatVanityPlate(two) }`)
+  return plateText;
+}
+
+function formatVanityPlate(plateText) {
+  let words = plateText.split(' ')
+  words = words.map(word => word.toUpperCase());
+  return words.join('');
+}
+
+function produceVanityPlate(plateText) {
+  return formatVanityPlate(shortenPlateText(coolifyplateText(plateText)));
+}
+
+const one = 'I like money';
+console.log(`Number plate: ${produceVanityPlate(one)}`);
+
+const two = 'Cats for life';
+console.log(`Number plate: ${produceVanityPlate(two)}`)
+
+const three = 'Hot for you too';
+console.log(`Number plate: ${produceVanityPlate(three)}`);
 
 
 /*
