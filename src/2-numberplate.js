@@ -1,4 +1,4 @@
-function coolifyplateText(plateText) {
+function coolifyPlateText(plateText) {
     return plateText.replace('for', '4').replace('too', 'to').replace('to', '2');
 }
 
@@ -11,13 +11,13 @@ function shortenPlateText(plateText) {
 }
 
 function formatVanityPlate(plateText) {
-  let words = plateText.split(' ')
+  let words = plateText.split(' ');
   words = words.map(word => word.toUpperCase());
   return words.join('');
 }
 
 function produceVanityPlate(plateText) {
-  return formatVanityPlate(shortenPlateText(coolifyplateText(plateText)));
+  return formatVanityPlate(shortenPlateText(coolifyPlateText(plateText)));
 }
 
 const one = 'I like money';
